@@ -1,48 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
-  <!-- Leaf / Eco Icon -->
-  <g transform="translate(8, 10)">
-    <!-- Main leaf shape -->
-    <path d="M30 5 
-             C45 5, 58 18, 58 35 
-             C58 52, 45 60, 30 60 
-             C22 60, 15 52, 12 42
-             C8 30, 12 15, 30 5Z" 
-          fill="#0D9488"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;display=swap');
+      
+      .bg { fill: #254838; }
+      .leaf-green { fill: #7cb83e; }
+      .leaf-gray { fill: #e2e4e0; }
+      .text-eco {
+        font-family: 'Playfair Display', 'Didot', 'Bodoni MT', 'Georgia', serif;
+        font-weight: 900;
+        font-size: 130px;
+        fill: #e2e4e0;
+        letter-spacing: 6px;
+      }
+      .text-track {
+        font-family: 'Playfair Display', 'Georgia', serif;
+        font-weight: 700;
+        font-size: 82px;
+        fill: #7cb83e;
+        letter-spacing: 1px;
+      }
+    </style>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="800" height="800" class="bg" />
+
+  <!-- Grupo do Logotipo (Folhas) -->
+  <g id="leaves">
+    <!-- Folha Esquerda (Verde) -->
+    <path class="leaf-green" d="M 392,282 C 370,210 332,138 308,88 C 298,98 282,130 282,175 C 282,238 340,276 392,282 Z" />
     
-    <!-- Leaf vein -->
-    <path d="M30 12 
-             Q38 28, 36 48" 
-          stroke="#F0FDFA" 
-          stroke-width="2.5" 
-          fill="none" 
-          stroke-linecap="round"/>
+    <!-- Nervura da Folha Esquerda -->
+    <path d="M 392,282 C 344,232 315,168 309,102" fill="none" stroke="#254838" stroke-width="5.5" stroke-linecap="round" />
+
+    <!-- Folha Direita (Cinza/Branco) -->
+    <path class="leaf-gray" d="M 405,325 C 390,250 425,140 510,72 C 550,140 542,235 405,325 Z" />
     
-    <!-- Small side veins -->
-    <path d="M30 22 Q42 26, 48 22" stroke="#F0FDFA" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M30 34 Q40 38, 46 35" stroke="#F0FDFA" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    
-    <!-- Small circular accent (tracking / CO2 idea) -->
-    <circle cx="48" cy="18" r="7" fill="#22C55E" opacity="0.95"/>
-    <circle cx="48" cy="18" r="3.5" fill="#F0FDFA"/>
+    <!-- Nervura da Folha Direita -->
+    <path d="M 405,325 C 418,240 452,145 500,82" fill="none" stroke="#254838" stroke-width="6.5" stroke-linecap="round" />
   </g>
-  
-  <!-- Text EcoTrack -->
-  <text x="85" y="52" 
-        font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="36" 
-        font-weight="700" 
-        fill="#0F766E"
-        letter-spacing="-0.5">
-    EcoTrack
-  </text>
-  
-  <!-- Small tagline -->
-  <text x="88" y="70" 
-        font-family="Inter, system-ui, -apple-system, sans-serif" 
-        font-size="11" 
-        font-weight="500" 
-        fill="#14B8A6"
-        letter-spacing="1.2">
-    SUSTAINABILITY TRACKING
-  </text>
+
+  <!-- Textos -->
+  <g id="typography">
+    <!-- Texto ECO -->
+    <text x="400" y="435" text-anchor="middle" class="text-eco">ECO</text>
+    
+    <!-- Texto Track -->
+    <text x="400" y="522" text-anchor="middle" class="text-track">Track</text>
+  </g>
 </svg>
+
