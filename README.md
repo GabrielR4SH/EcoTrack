@@ -1,31 +1,50 @@
 # EcoTrack
 
-Mini plataforma SaaS multi-tenant de gestão e rastreamento de emissões de CO₂, inspirada na GreenPlat™.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/GabrielR4SH/EcoTrack/main/ecotrack-logo.svg" alt="EcoTrack Logo" width="280">
+</p>
 
-Desenvolvido com foco em aprendizado de arquitetura real de SaaS (Laravel + React + Multitenancy + Docker).
+<p align="center">
+  <strong>Mini plataforma SaaS multi-tenant de gestão e rastreamento de emissões de CO₂</strong><br>
+  Inspirada na <a href="https://greenplat.com">GreenPlat™</a>
+</p>
 
-## Stack
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-13-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/MySQL-8-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Multitenancy-Yes-0D9488?style=flat-square" alt="Multitenancy">
+</p>
 
-- **Backend:** Laravel 13 + Sanctum
-- **Frontend:** React + Vite + Tailwind CSS
-- **Banco de dados:** MySQL 8
-- **Infraestrutura:** Docker + Docker Compose (customizado, sem Sail)
-- **Multitenancy:** Shared Database com `tenant_id`
+---
 
-## Funcionalidades previstas
+## Sobre o projeto
 
-- Autenticação (Login / Registro)
-- Multitenancy (cada empresa isolada)
+O **EcoTrack** é um projeto de estudo que simula uma plataforma real de gestão ambiental (estilo GreenPlat).  
+O foco é aprender arquitetura de SaaS multi-tenant com as tecnologias mais usadas no mercado.
+
+### Stack
+
+| Camada          | Tecnologia                          |
+|-----------------|-------------------------------------|
+| Backend         | Laravel 13 + Sanctum                |
+| Frontend        | React + Vite + Tailwind CSS         |
+| Banco de dados  | MySQL 8                             |
+| Infraestrutura  | Docker + Docker Compose (sem Sail)  |
+| Multitenancy    | Shared Database + `tenant_id`       |
+
+### Funcionalidades previstas
+
+- Login e Registro
+- Multitenancy (isolamento por empresa)
 - CRUD de Emissões de CO₂
 - Dashboard simples
-- Identidade visual inspirada na GreenPlat (tons de verde)
+- Identidade visual com cores da GreenPlat
 
-## Pré-requisitos
+---
 
-- Docker + Docker Compose
-- Git
-
-## Como rodar o projeto
+## Como rodar
 
 ```bash
 # 1. Clone o repositório
@@ -42,6 +61,4 @@ docker compose exec app bash
 composer install
 cp .env.example .env
 php artisan key:generate
-
-# 5. Rode as migrations
 php artisan migrate
