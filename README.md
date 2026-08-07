@@ -62,3 +62,33 @@ composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
+```
+
+## Acesse 
+- API: http://localhost:8080
+- Frontend (quando estiver pronto): http://localhost:5173
+
+# Estrutura 
+
+```text
+EcoTrack/
+├── backend/              # Laravel 13 (API)
+├── frontend/             # React + Vite
+├── docker/
+│   ├── php/
+│   └── nginx/
+├── docker-compose.yml
+└── README.md
+```
+
+# Próximos passos
+
+- [x] Docker environment
+- [x] Laravel 13 instalado
+- [x] Instalação e configuração do Sanctum
+- [ ] Autenticação
+- [ ] Multitenancy básico
+- [ ] Pattern Service-Repository
+- [ ] Models e migrations (Tenant, User, Emission)
+- [ ] Frontend React (Login / Registro / CRUD)
+- [ ] Identidade visual + logo
